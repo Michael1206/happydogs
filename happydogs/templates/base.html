@@ -1,0 +1,25 @@
+{% load static %}<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}"{% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" type="text/css" href={% static '/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href={% static '/vendor/bootstrap/css/bootstrap-theme.min.css' %}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+    <header id="header">
+        {% block header %}
+        {% endblock %}
+    </header>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script type="text/javascript" src="{%  static "/vendor/jQuery/jquery-3.1.1.min.js" %}"></script>
+    <script type="text/javascript" src="{%  static "/vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+</body>
+</html>

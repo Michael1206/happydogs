@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Happy Dogs
+{% endblock %}
+{% block header %}
+{% endblock %}
+{% block content %}
+    <div>
+        <form action="/dog/" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}
