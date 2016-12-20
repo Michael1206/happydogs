@@ -3,7 +3,7 @@ from django.db import models
 
 class PeriodModel(models.Model):
     id = models.IntegerField(primary_key=True)
-    date = models.DateField()
+    date = models.DateField(unique=True)
 
 class DogModel(models.Model):
     id = models.IntegerField(primary_key=True)
